@@ -1,14 +1,26 @@
+Option Explicit
 
 Function func_get_rgb_value(ByVal s_colorname As String) As Long
     Dim f_dict As Object
 
     Set f_dict = CreateObject("Scripting.Dicionary")
 
-        f_dict("black") = RGB(0, 43, 54)
-        f_dict("yellow")=RGB(181,137,0)
-        f_dict("red")=RGB(220,50,47)
-        f_dict("blue")=RGB(38,139,210)
-        f_dict("green")=RGB(133,153,0)
+		f_dict("base03") = RGB(0, 43, 54)
+		f_dict("base02") = RGB(7, 54, 66)
+		f_dict("base01") = RGB(88, 110, 117)
+		f_dict("base00") = RGB(101, 123, 131)
+		f_dict("base0") = RGB(131, 148, 150)
+		f_dict("base1") = RGB(147, 161, 161)
+		f_dict("base2") = RGB(238, 232, 213)
+		f_dict("base3") = RGB(253, 246, 227)
+		f_dict("yellow") = RGB(181, 137, 0)
+		f_dict("orange") = RGB(203, 75, 22)
+		f_dict("red") = RGB(220, 50, 47)
+		f_dict("magenta") = RGB(211, 54, 130)
+		f_dict("violet") = RGB(108, 113, 196)
+		f_dict("blue") = RGB(38, 139, 210)
+		f_dict("cyan") = RGB(42, 161, 152)
+		f_dict("green") = RGB(133, 153, 0)
 
     get_rgb_value = f_dict(s_colorname)
 
