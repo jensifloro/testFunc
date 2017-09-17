@@ -1,0 +1,25 @@
+
+Function func_get_rgb_value(ByVal s_colorname As String) As Long
+    Dim f_dict As Object
+
+    Set f_dict = CreateObject("Scripting.Dicionary")
+
+        f_dict("black") = RGB(0, 43, 54)
+        f_dict("yellow")=RGB(181,137,0)
+        f_dict("red")=RGB(220,50,47)
+        f_dict("blue")=RGB(38,139,210)
+        f_dict("green")=RGB(133,153,0)
+
+    get_rgb_value = f_dict(s_colorname)
+
+    Set f_dict = Nothing    
+End Function
+
+Sub test_set_color()
+
+    With ThisWorkbook.ActiveSheet.Cells(1, 1)
+        .Font.Color = func_get_rgb_value("black")
+        .Interior.Color = func_get_rgb_value("green")
+    End With
+
+End Sub
